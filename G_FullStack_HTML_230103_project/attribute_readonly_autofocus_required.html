@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>여름방학 특강 신청</h1>
+    <form>
+        <fieldset>
+            <legend>수강과목</legend>
+            <ul>
+                <li>
+                    영어회화(초급)
+                    <!-- readonly 속성은 값을 변경 못한다. 주로 id에 많이 사용 -->
+                    <input type="text" value="오전 9:00~11:00" readonly>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>신청자</legend>
+            <ul>
+                <li>
+                    이름
+                    <!-- autofocus 속성은 자동으로 포커스를 위치 -->
+                    <!-- required 속성은 필수값 -->
+                    <input type="text" autofocus required>
+                </li>
+                <li>
+                    학번
+                    <!-- placholder 속성은 힌트->주로 전화번호내에서 많이 사용 -->
+                    <!-- maxlength 속성은 최대길이 제한 -->
+                    <input type="text" placeholder="하이픈(-) 없이 입력" maxlength="8" required>
+                </li>
+                <li>
+                    학과
+                    <select>
+                        <!-- value 속성은 서버로 들고간다. -->
+                        <option value="archi">건축공학과</option>
+                        <option value="mechanic">기계공학과</option>
+                        <option value="indust">산업공학과</option>
+                        <option value="elec">전기전자공학과</option>
+                        <!-- selected 속성은 초기값 설정 -->
+                        <option value="computer" selected>컴퓨터공학과</option>
+                        <option value="chemical">화학공학과</option>
+                    </select>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>교재 주문</legend>
+            <ul>
+                <li>
+                    교재
+                    <input type="number" value="1" min="1" max="3">
+                </li>
+                <li>
+                    단체주문
+                    <input type="number" value="10" min="10" max="100" step="10">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <button type="submit">신청하기</button>
+            <button type="reset">다시쓰기</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
