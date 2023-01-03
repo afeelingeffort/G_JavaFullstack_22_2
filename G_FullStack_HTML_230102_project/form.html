@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- action="search.jsp" -> search.jsp 파일로 이동 -->
+    <!-- ERRO_FILE_FOUND ->   파일이 없을 때(404 not found)/// -->
+    <!-- method="post" -> 보안 적용, method="get" -> url에 아이디/비밀번호 노출 -->
+    <form action="search.jsp" method="post">
+        <!-- type="text" 속성값은 텍스트 박스 -->
+        <input type="text">
+        <!-- type="submit" 속성값은 서버로 이동(form 안에 입력값들을 들고 간다.) -->
+        <input type="submit" value="검색">
+        <!-- type="button" -> 서버이동 없음 -->
+        <input type="button" value="검색">
+    </form>
+</body>
+</html>

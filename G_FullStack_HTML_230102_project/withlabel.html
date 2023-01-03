@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h3>수강 분야(다수 선택 가능)</h3>
+        <ul>
+            <!-- name="grm" -> grm을 가지고 서버로 이동 -->
+            <!-- 문법을 클릭해도 체크가 되지 않음 -->
+            <input type="checkbox" name="grm">문법<br>
+            <input type="checkbox" name="wr">작문<br>
+            <!-- label -> '독해'를 클릭하면 체크가 됨 -->
+            <label><input type="checkbox" name="rd">독해<br></label>
+        </ul>
+        <h3>수강 과목(1과목만 선택 가능)</h3>
+        <ul>
+            <!-- name="subject" -> name을 똑같이 맞추어야 하나만 선택 가능 -->
+            <!-- 서버로 갈 때는 subject에 eng나 ch를 들고 간다 -->
+            <!-- label 추가해서 글자를 클릭하면 선택됨 -->
+            <label><input type="radio" name="subject" value="eng">영어회화<br></label>
+            <label><input type="radio" name="subject" value="ch">중국어회화<br></label>
+            <input type="radio" name="subject" value="jp">일어회화<br>
+        </ul>
+    </form>
+</body>
+</html>
