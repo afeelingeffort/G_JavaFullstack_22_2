@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- oninput 속성으로 계산결과를 반영 -->
+    <!-- parseInt 함수로 문자를 정수로 변환 -->
+    <form oninput="result.value= parseInt(num1.value)+parseInt(num2.value)">
+        <input type="number" name="num1" value="0">+
+        <input type="number" name="num2" value="0">=
+
+        <!-- output 태그에 name 속성값으로 계산결과를 받음 -->
+        <!-- <output name="result"></output> -->
+
+        <!-- input 태그에 name속성값으로 박스 형태로 계산결과를 받음 -->
+        <input name="result">
+    </form>
+</body>
+
+</html>

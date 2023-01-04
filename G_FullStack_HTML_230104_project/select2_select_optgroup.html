@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>여름방학 특강 신청</h1>
+    <form>
+        <fieldset>
+            <legend>수강 신청인</legend>
+            <ul>
+                <li>
+                    학번
+                    <input type="text" autofocus>
+                </li>
+                <li>
+                    이름
+                    <input type="text">
+                </li>
+                <li>
+                    학과
+                    <select>
+                        <!-- optgroup태그는 콤보리스트를 그룹으로 묶음 -->
+                        <!-- label 속성은 그룹 이름 설정 -->
+                        <optgroup label="공과대학">
+                            <option value="archi">건축공학과</option>
+                            <option value="mechanic">기계공학과</option>
+                            <option value="indust">산업공학과</option>
+                            <option value="elec">전기전자공학과</option>
+                            <!-- selected 속성은 초기값 설정 -->
+                            <option value="computer" selected>컴퓨터공학과</option>
+                            <option value="chemical">화학공학과</option>
+                        </optgroup>
+                        <optgroup label="인문대학">
+                            <option value="history">사학과</option>
+                            <option value="lang">어문학부</option>
+                            <option value="philo">철학</option>
+                        </optgroup>
+                    </select>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+
+</html>

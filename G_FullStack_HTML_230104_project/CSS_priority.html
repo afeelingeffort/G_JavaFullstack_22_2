@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:20px;
+        }
+
+        body{
+            color:blue;
+        }
+
+        #container{
+            border:1px dotted gray;
+            width:600px;
+            padding:15px;
+        }
+
+        h2{
+            /* !important가 최우선 적용 */
+            color:brown !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- 인라인 스타일이 h2 태그스타일보다 우선순위가 높다. -->
+        <h2 style="color:green;">이지스퍼블리싱의 미션</h2>
+        <p>사람에게 구체적으로 도움을 주는 책</p>
+        <p>사람에게 구체적으로 도움을 주는 책</p>
+        <p>사람에게 구체적으로 도움을 주는 책</p>
+        <!-- 인라인 스타일이 body 태그스타일보다 우선순위가 높다. -->
+        <p style="color:red; font-style:italic;">사람에게 구체적으로 도움을 주는 책</p>
+    </div>
+</body>
+</html>

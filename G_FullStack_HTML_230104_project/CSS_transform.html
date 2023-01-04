@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* 테두리 두께:2px 실선 녹색 */
+            border: 2px solid green;
+            width: 100px;
+            /* 텍스트 정렬:가운데 */
+            text-align: center;
+        }
+
+        /* hover 이벤트는 마우스를 올렸을 때 처리 */
+        .box:hover {
+            /* -moz-접두사는 모질라, 파이어폭스 적용 */
+            /* -moz-transform:rotate(15deg); */
+            /* -o- 접두사는 오페라 적용 */
+            /* -o-transform:ratate(15deg); */
+            /* -ms- 접두사는 익스플로러 적용 */
+            /* -ms-transform:ratate(15deg); */
+            /* -webkit-은 사파리, 크롬 적용 */
+            /* -webkit-transform:ratate(15deg); */
+
+            /* transform의 rotate 속성값으로 15도 기운다. */
+            /* 접두사가 없는 것은 표준 */
+            transform: rotate(15deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">Mouse Over</div>
+</body>
+
+</html>
