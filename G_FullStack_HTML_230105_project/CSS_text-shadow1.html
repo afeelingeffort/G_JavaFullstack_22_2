@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size:100px;
+
+            /* 글꼴 */
+            font-family: "Arial Rounded MT";
+        }
+
+        .shadow1{
+            color:orange;
+
+            /* 가로 1px 세로 1px 그림자 */
+            /* 번질 정도, 그림자색은 기본값: 번짐 정도는 기본값이 0, 그림자색은 글자색 */
+            text-shadow: 10px 10px;
+        }
+
+        .shadow2{
+            /* 첫번째 5px은 오른쪽 그림자, -5px은 왼쪽 그림자 */
+            /* 번짐정도 : 3px */
+            /* 그림자색 #f00 */
+            text-shadow: 5px 5px 3px #f00;
+        }
+
+        .shadow3{
+            color:white;
+
+            /* 두번째 7px은 아래쪽 그림자, -7px은 위쪽 그림자*/
+            /* 번짐정도 : 15px */
+            text-shadow: 7px -7px 15px #000;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="shadow1">HTML5</h1>
+    <h1 class="shadow2">HTML5</h1>
+    <h1 class="shadow3">HTML5</h1>
+</body>
+</html>

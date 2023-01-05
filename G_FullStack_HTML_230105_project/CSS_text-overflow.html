@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            border:1px solid #ccc;
+
+            width:300px;
+
+            /* white-space속성의 nowrap 값은 줄바꿈 없음 */
+            white-space: nowrap;
+
+            /* 스크롤 없어지면서 넘치는 글자가 잘림 */
+            overflow:hidden;
+
+            /* 잘린 부분이 ...으로 표시됨 */
+            text-overflow: ellipsis;
+        }
+
+        .content:hover{
+            /* 잘린 글자를 보여줌 */
+            overflow:visible;
+        }
+    </style>
+</head>
+<body>
+    <h2>귀리(Oat)</h2>
+    <p class="content">귀리는 베타글루칸(항암 및 면역증강작용을 가지고 있는 불소화성 다당류) 성분을 포함하고 있다.</p>
+</body>
+</html>

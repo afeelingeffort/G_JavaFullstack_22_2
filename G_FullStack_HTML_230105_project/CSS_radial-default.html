@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 300px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .grad1 {
+            /* 그라데이션: 타원형으로 중심점이 흰색에서 노란색에서 빨간색으로 */
+            background: radial-gradient(white, yellow, red);
+        }
+
+        .grad2 {
+            /* 그라데이션: 원형으로 중심점이 흰색에서 노란색에서 빨간색에서 파란색으로 */
+            background: radial-gradient(circle, white, yellow, red, blue);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+</body>
+
+</html>

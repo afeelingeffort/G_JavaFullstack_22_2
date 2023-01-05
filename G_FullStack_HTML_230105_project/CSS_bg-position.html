@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 20px;
+        }
+
+        button{
+            width:140px;
+            
+            height:50px;
+            
+            background-color: rgb(0, 110, 255);
+            
+            border:1px solid rgb(0, 110, 255);
+            
+            /* 테두리 꼭지점 부분을 둥글게 처리 */
+            border-radius: 8px;
+
+            color:#fff;
+
+            font-weight: bold;
+        }
+
+        #bg1{
+            background-image: url("images/light.png");
+
+            background-repeat:no-repeat;
+
+            /* 가로 세로 px만큼 배치 */
+            background-position: 5px 7px;
+        }
+
+        #bg2{
+            background-image: url("images/light.png");
+
+            background-repeat:no-repeat;
+
+            /* 수평은 오른쪽, 수직은 가운데 배치 */
+            background-position: right center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="bg1">
+            IDEA
+        </button>
+    </div>
+
+    <div>
+        <button id="bg2">
+            IDEA
+        </button>
+    </div>
+</body>
+
+</html>

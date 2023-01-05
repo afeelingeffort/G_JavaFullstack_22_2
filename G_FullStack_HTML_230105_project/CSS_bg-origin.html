@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 15px solid #ccc;
+            width:400px;
+            height:200px;
+            margin-left: 20px;
+            padding:35px;
+        }
+
+        .bg1{
+            background:url("images/bg3.jpg") no-repeat;
+
+            /* padding-box는 기본값 */
+            /* 패딩까지 적용 */
+            background-origin: padding-box;
+        }
+
+        .bg2{
+            background:url("images/bg3.jpg") no-repeat;
+
+            /* 테두리까지 이미지가 표시하므로, 보이지 않는 부분이 발생 */
+            background-origin:border-box;
+        }
+
+        .bg3{
+            background:url("images/bg3.jpg") no-repeat;
+
+            /* 패딩을 제외한 내용까지 적용 */
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+    <div class="bg3"></div>
+</body>
+</html>
