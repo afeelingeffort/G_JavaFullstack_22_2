@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+            height:100px;
+            background: #0094ff;
+        }
+
+        .box1{
+            /* top right bottom left 순서대로 적용 */
+            margin:30px 50px 30px 50px;
+        }
+
+        .box2{
+            /* margin:30px 50px 30px 50px; */
+            /* 상동 위/아래 중첩되어서 30px만 적용*/
+            margin:30px 50px;
+        }
+
+        .box3{
+            /* 아래/위 중첩되어서 큰쪽 기준으로 적용 */
+            margin:50px;
+        }
+
+        .box4{
+            /* margin : 30px 5px 10px 5px */
+            margin:30px 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+</body>
+</html>

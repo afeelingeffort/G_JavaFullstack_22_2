@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:2px solid black;
+            width:200px;
+            height:100px;
+            background: #ffdB00;
+            margin:15px;
+            display: inline-block;
+        }
+
+        .round1{
+            /* 100px 50px : 가로 세로 크기만큼 둥글게 */
+            /* border-top-left-radius : 위 왼쪽 */
+            border-top-left-radius: 100px 50px;
+        }
+
+        .round2{
+            /* 이건 왜 안 늘려짐? */
+            border-bottom-right-radius: 50% 30%;
+        }
+
+        .round2_2{
+            border-bottom-right-radius: 50px 30px;
+        }
+
+        .round3{
+            border-top-right-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="round1"></div>
+    <div class="round2"></div>
+    <div class="round2_2"></div>
+    <div class="round3"></div>
+</body>
+</html>

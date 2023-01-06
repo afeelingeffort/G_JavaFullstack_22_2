@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width:300px;
+            height:150px;
+            border:2px solid red;
+            margin:10px;
+            padding:30px;
+
+            /* content-box : 기본값 */
+            box-sizing: content-box;
+        }
+
+        .box2{
+            width:300px;
+            height:150px;
+            border:2px solid red;
+            margin:10px;
+            padding:30px;
+
+            /* content-box보다 작게 표시됨 */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">box-sizing="content-box"</div>
+    <div class="box2">box-sizing="border-box"</div>
+</body>
+</html>

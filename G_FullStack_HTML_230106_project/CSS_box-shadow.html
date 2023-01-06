@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid;
+            width:200px;
+            height:100px;
+            display: inline-block;
+            margin:15px;
+            border-radius: 20px;
+        }
+
+        .box1{
+            /* 가로 세로 흐림 번짐 그림자색상을 순서대로 표시 */
+            box-shadow: 12px -12px 5px 0px black;
+        }
+
+        .box2{
+            box-shadow: -12px 12px 15px 10px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>
