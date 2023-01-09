@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            margin-bottom: 50px;
+        }
+
+        .table1 {
+            border: 1px solid black;
+
+            /* separate : 분리된 (기본값으로 변화없음) */
+            border-collapse: separate;
+
+            /* collapse : 표하고 셀 테두리를 합침 */
+            /* border-collapse: collapse; */
+
+            /* collapse에서는 적용 안 됨 */
+            border-spacing: 20px 10px;
+
+            /* show : 기본값으로 변화 없음 */
+            empty-cells: show;
+        }
+
+        .table2{
+            /* 셀 여백으로 가로/세로 적용됨 */
+            border-spacing: 20px 10px;
+
+            /* hide : 빈 셀을 숨김 */
+            empty-cells: hide;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table1">
+        <caption>프로축구 경기 일정</caption>
+        <tr>
+            <td>울산</td>
+            <td>울산 vs 인천</td>
+            <td>TV 중계</td>
+        </tr>
+        <tr>
+            <td>부산</td>
+            <td>부산 vs 대전</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>서울</td>
+            <td>서울 vs 강원</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <table class="table2">
+        <caption>프로축구 경기 일정</caption>
+        <tr>
+            <td>울산</td>
+            <td>울산 vs 인천</td>
+            <td>TV 중계</td>
+        </tr>
+        <tr>
+            <td>부산</td>
+            <td>부산 vs 대전</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>서울</td>
+            <td>서울 vs 강원</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>

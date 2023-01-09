@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            margin-bottom: 50px;
+            
+            /* 셀 내용에 상관없이 강제로 셀 너비 조절 */
+            width:300px;
+        }
+
+        .table1 {
+            border: 1px solid black;
+
+            /* separate : 분리된 (기본값으로 변화없음) */
+            /* border-collapse: separate; */
+
+            /* collapse : 표하고 셀 테두리를 합침 */
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table1">
+        <caption>프로축구 경기 일정</caption>
+        <tr>
+            <td>울산</td>
+            <!-- 셀이 내용에 따라서 크기가 변화 -->
+            <!-- <td>울산 vs 인천123465468a98798d7</td> -->
+            <td>울산 vs 인천</td>
+        </tr>
+        <tr>
+            <td>부산</td>
+            <td>부산 vs 대전</td>
+        </tr>
+        <tr>
+            <td>서울</td>
+            <td>서울 vs 강원</td>
+        </tr>
+    </table>
+</body>
+
+</html>

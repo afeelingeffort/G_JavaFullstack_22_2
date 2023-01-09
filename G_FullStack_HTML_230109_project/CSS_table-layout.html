@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td{
+            border:1px solid #ccc;
+        }
+
+        .table1{
+            border-collapse: collapse;
+
+            /* 너비 설정시 화면 축소해도 글자가 한줄로 표시 안됨 */
+            width:300px;
+
+            /* 300px에 맞추어서 테두리 밖으로 글자가 나감 */
+            table-layout: fixed;
+
+            /* 테두리 밖으로 나간 글자가 들어옴 */
+            word-break: break-all;
+        }
+
+        .table1 td{
+            width:150px;
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Table Layout</h1>
+    <table class="table1">
+        <tr>
+            <td>
+                한글로띄어쓰기없이길게붙여쓰기
+            </td>
+            <td>
+                long_description_without-space
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
