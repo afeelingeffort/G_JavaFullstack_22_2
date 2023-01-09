@@ -1,0 +1,64 @@
+.container{
+    width:960px;
+}
+
+header{
+    /* ../ : 상위 폴더  */
+    background-image: url("../images/bg.png");
+    height:280px;
+    position:relative;
+}
+
+header h1{
+    font-size:3em;
+    color:#ffc;
+    right:20px;
+    bottom:70px;
+    position:absolute;
+}
+
+header h2{
+    font-size:2em;
+    color:#ff0;
+    right:20px;
+    bottom:30px;
+    position:absolute;
+}
+
+.navi{
+    width:960px;
+    background:#271717;
+    height:150px;
+    
+    /* 음수값으로 위의 배경하고 거의 밀착한다 */
+    margin-top:-15px;
+}
+
+.navi ul{
+    list-style:none;
+}
+
+.navi a{
+    text-decoration: none;
+    padding:10px 5px 5px 35px;
+    color:#fff;
+    display:block
+}
+
+.content{
+    width:720px;
+    padding-left: 10px;
+    float:left;
+}
+
+.navi, a:hover{
+    color:#fc0;
+}
+
+footer{
+    clear:both;
+    background-color: #030;
+    color:#fff;
+    padding:10px 0;
+    text-align: center;
+}
