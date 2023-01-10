@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+
+        body{
+            background-color: antiquewhite;
+        }
+
+        h1{
+            color: white;
+        }
+        button{
+            padding:10px 20px;
+            border-radius: 10px;
+            border:none;
+            background-color: coral;
+            color: white;
+        }
+
+        input{
+            border-radius: 10px;
+            border:none;
+        }
+
+        .wrapper{
+            width:240px;
+            padding:15px;
+            border: 1px solid none;
+            background-color:wheat;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px coral;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="wrapper">
+    <input type="text" style="width:210px; height:35px;">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <button type="button">+</button>
+                    </td>
+                    <td>
+                        <button type="button">-</button>
+                    </td>
+                    <td>
+                        <button type="button">*</button>
+                    </td>
+                    <td>
+                        <button type="button" style="width:50px;">/</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button type="button">7</button>
+                    </td>
+                    <td>
+                        <button type="button">8</button>
+                    </td>
+                    <td>
+                        <button type="button">9</button>
+                    </td>
+                    <td>
+                        <button type="button">C</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button type="button">4</button>
+                    </td>
+                    <td>
+                        <button type="button">5</button>
+                    </td>
+                    <td>
+                        <button type="button">6</button>
+                    </td>
+                    <td rowspan="3">
+                        <button type="button" style="height:124px">=</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button type="button">1</button>
+                    </td>
+                    <td>
+                        <button type="button">2</button>
+                    </td>
+                    <td>
+                        <button type="button">3</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <button type="button" style="width:100%;">0</button>
+                    </td>
+                    <td>
+                        <button type="button">.</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

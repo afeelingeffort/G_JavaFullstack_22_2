@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            width: 200px;
+            height: 120px;
+            display: inline-block;
+            border-radius: 20px;
+            border: 1px solid black;
+            box-shadow: 5px 5px 10px 5px black;
+        }
+
+        button {
+            color: white;
+            border-radius: 2px;
+            border:none;
+        }
+
+        .button {
+            background-color: green;
+            clear: both;
+        }
+
+        .button2 {
+            background-color: red;
+        }
+
+        .button3 {
+            background-color: black;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .TL {
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+            <h2 class="stopwatch">00:00</h2>
+
+        <div style="text-align:center;">
+            <form>
+                <button class="button" style="display:inline-block;">Start</button>
+                <button class="button2" style="display:inline-block;">Stop</button>
+                <button class="button3" style="display:inline-block;">Reset</button>
+            </form>
+        </div>
+        <span class="TL">Time Lap</span>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+
+        li{
+            display:inline-block;
+            margin:10px;
+        }
+
+        li a{
+            font-size: 14px;
+            color:blue;
+            text-decoration: none;
+        }
+
+        /* |= : 해당 단어와 하이픈 연결된 것만 적용 */
+        /* 단어 일부나 스페이스는 안됨 */
+        a[title|="us"]{
+            background: url(images/us.png) no-repeat left center;
+            padding:5px 25px;
+        }
+
+        a[title|="japanese"]{
+            background:url(images/jp.png) no-repeat left center;
+            padding:5px 25px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>외국어 서비스 : </li>
+        <!-- title : 마우스 올렸을 때 제목 표시 -->
+        <li><a href="#" title="us">영어</a></li>
+        <li><a href="#" title="us-english">영어</a></li>
+        <li><a href="#" title="japanese">일본어</a></li>
+    </ul>
+</body>
+</html>

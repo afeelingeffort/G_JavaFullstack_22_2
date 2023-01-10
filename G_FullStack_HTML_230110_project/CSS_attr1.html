@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style:none;
+        }
+
+        li{
+            width:120px;
+            margin:10px;
+            display:inline-block;
+        }
+
+        li a{
+            padding: 5px 20px;
+            font-size:14px;
+            color: blue;
+            text-decoration: none;
+        }
+
+        /* a태그에 href속성을 가진 범위에 적용 */
+        a[href]{
+            background:yellow;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a>메인 메뉴 : </a></li>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+    </ul>
+</body>
+</html>

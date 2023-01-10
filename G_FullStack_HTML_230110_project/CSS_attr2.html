@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style:none;
+        }
+
+        li{
+            padding:5px 30px;
+        }
+
+        li a{
+            color:blue;
+            text-decoration: none;
+        }
+
+        /* 속성이 target이고, 속성값이 _blank인 경우 */
+        a[target="_blank"]{
+            background:url(images/newwindow.png) no-repeat center right;
+            padding-right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML5 표준안 사이트</h1>
+    <ul>
+        <li><a href="http://www.w3c.org/TR/html" target="_blank">HTML</a></li>
+        <li><a href="http://www.w3c.org/TR/selector">CSS Selector Level3</a></li>
+        <li><a href="http://www.w3c.org/TR/css3-mediaqueries">미디어쿼리</a></li>
+    </ul>
+</body>
+</html>

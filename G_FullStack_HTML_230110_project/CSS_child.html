@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* > : 자식 요소만 적용 */
+        #container>ul{
+            border:1px dotted blue;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <header>
+            <h1>예약 방법 및 요금</h1>
+        </header>
+        <p>요안도라에 예약하려면?</p>
+        <!-- 자식 요소에 스타일 적용 -->
+        <ul>
+            <li>
+                예약 방법
+                <!-- 손자 요소에 스타일 적용 -->
+                <ul>
+                    <li>직접 통화</li>
+                    <li>문자 남기기</li>
+                </ul>
+            </li>
+
+            <li>
+                요금
+                <!-- 손자 요소에 스타일 적용 -->
+                <ul>
+                    <li>1인 : 40,000원</li>
+                    <li>2인 : 60,000원</li>
+                    <li>3인 : 80,000원</li>
+                    <li>4인 : 100,000원</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
