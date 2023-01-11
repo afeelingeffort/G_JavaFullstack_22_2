@@ -1,0 +1,57 @@
+body{
+    background:rgb(9, 100, 160);
+}
+
+#container{
+    width:320px;
+    margin:50px auto;
+}
+
+.card{
+    height:500px;
+    margin:20px 10px;
+    background-color: #ffffff;
+    position:relative;
+}
+
+.words{
+    padding:10px;
+    text-align:center;
+}
+
+@media screen and (min-width:768px) and (min-width:1719px){
+    #container{
+    width:570px;
+    margin:50px auto;
+    }
+
+    .card{
+    height:250px;
+    }
+
+    .words{
+        left:310px;
+        top:50px;
+        width:200px;
+        position:absolute;
+    }      
+}
+
+@media screen and (min-width:1720px){
+    #container{
+    width:1710px;
+    }
+
+    .card{
+    height:250px;
+    width:550px;
+    float:left;
+    }
+
+    .words{
+        left:310px;
+        top:50px;
+        width:200px;
+        position:absolute;
+    }      
+}
