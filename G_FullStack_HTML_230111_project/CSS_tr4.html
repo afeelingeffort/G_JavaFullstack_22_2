@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            margin:100px;
+            background:#0094ff;
+        }
+
+        .box{
+            transition:2s ease-in;
+        }
+
+        .box:hover{
+            /* x축으로 180도 회전하면서 2배 커짐 */
+            /* transform:scale(2) rotateX(180deg); */
+
+            /* 원근감 추가 */
+            transform:scale(2) rotateX(180deg) perspective(120px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

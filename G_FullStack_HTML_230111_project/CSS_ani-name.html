@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            margin:50px;
+            float:left;
+        }
+
+        #box1{
+            background-color: #3cff00;
+            border:1px solid black;
+            animation-name:shape;
+            animation-duration: 3s;
+        }
+
+        @keyframes shape{
+            from{
+                border:1px solid black;
+            }
+
+            to{
+                border:1px solid black;
+                border-radius: 50%;
+            }
+        }
+
+        #box2{
+            background-color: #8f06b0;
+            border:1px solid black;
+            animation-name:rotate;
+            animation-duration: 3s;
+        }
+
+        @keyframes rotate{
+            from{
+                transform:rotate(0deg);
+            }
+
+            to{
+                transform:rotate(45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>

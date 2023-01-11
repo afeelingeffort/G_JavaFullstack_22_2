@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .origin{
+            border:1px solid black;
+            margin:56px;
+            float:left;
+            
+            /* x축, y축 회전한 느낌이 남 */
+            perspective: 200px;
+        }
+
+        .rotatex{
+            transform:rotateX(45deg);
+        }
+
+        .rotatey{
+            transform:rotateY(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="origin">
+        <div class="rotatex">
+            <img src="images/fruit.jpg">
+        </div>
+    </div>
+
+    <div class="origin">
+        <div class="rotatey">
+            <img src="images/fruit.jpg">
+        </div>
+    </div>
+</body>
+</html>

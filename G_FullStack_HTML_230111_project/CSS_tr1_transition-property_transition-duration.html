@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tr1{
+            width:100px;
+            height:100px;
+            border:1px solid black;
+            background-color: blue;
+
+            /* 2초동안 너비가 2배, 1초동안 높이가 1.2배 */
+            transition-property: width, height;
+            transition-duration: 2s, 1s;
+        }
+
+        .tr1:hover{
+            width:200px;
+            height:120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tr1"></div>
+</body>
+</html>

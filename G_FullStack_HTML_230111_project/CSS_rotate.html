@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .origin{
+            border:1px solid black;
+            margin:40px;
+            float:left;
+        }
+
+        .rotate1:hover{
+            /* 시계방향으로 20도 회전 */
+            transform:rotate(20deg);
+
+            /* 이런식으로 자연스럽게 움직이는 효과를 낼 수 있군 */
+            transition-duration:2s;
+        }
+
+        .rotate2:hover{
+            /* 반시계방향으로 40도 회전 */
+            transform:rotate(-40deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="origin">
+        <div class="rotate1">
+            <img src="images/fruit.jpg">
+        </div>
+    </div>
+
+    <div class="origin">
+        <div class="rotate2">
+            <img src="images/fruit.jpg">
+        </div>
+    </div>
+</body>
+</html>

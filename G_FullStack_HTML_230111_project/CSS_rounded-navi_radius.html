@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul.navi li{
+            list-style:none;
+            width:8em;
+            height:1.6em;
+            border:1px solid #818181;
+            text-align: center;
+            float:left
+        }
+
+        ul.navi li a{
+            text-decoration: none;
+        }
+
+        ul.navi li:hover{
+            background-color: #333333;
+        }
+
+        /* > : 자식 요소만 스타일 적용(손자는 제외) */
+        ul.navi li:hover >a{
+            color:#fff;
+        }
+
+        /* li의 첫번째 항목 */
+        ul.navi li:first-child{
+            border-top-left-radius: 1em;
+            border-bottom-left-radius: 1em;
+        }
+
+        /* li의 마지막 항목 */
+        ul.navi li:last-child{
+            border-top-right-radius: 1em;
+            border-bottom-right-radius: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="navi">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">HTML5</a></li>
+            <li><a href="#">CSS3</a></li>
+            <li><a href="#">JQuery</a></li>
+        </ul>
+    </div>
+</body>
+</html>

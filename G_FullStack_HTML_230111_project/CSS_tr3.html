@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tr1{
+            width:200px;
+            height:200px;
+            background-color: red;
+            border:1px solid black;
+
+            /* 2초동안 변화, 시작을 느리게 */
+            transition:2s ease-in;
+        }
+
+        .tr1:hover{
+            width:100px;
+            height:100px;
+            background-color: #ff6e5f;
+            transform:rotate(270deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="tr1"></div>
+</body>
+</html>
