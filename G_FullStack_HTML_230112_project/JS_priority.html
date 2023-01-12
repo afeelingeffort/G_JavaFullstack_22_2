@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var a=10;
+        var a=10
+        // var b=20;
+        ,b=20
+        ,c=0;
+        var result;
+
+        // result=b>a;
+        //참 or 거짓 = 참
+        // result=b>a || b<=c;
+
+        //참 or 거짓 or 거짓 = 참
+        result=b>a || b<=c || a<c;
+        document.write(result,"<br>");
+
+        result=a<=b;
+        document.write(result,"<br>");
+
+        //참 and 참 and 거짓 = 거짓
+        result=a<=b && b>=c && c>a;
+        document.write(result,"<br>");
+
+        // 거짓의 반대는 참
+        result=!(a>b);
+        document.write(result,"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

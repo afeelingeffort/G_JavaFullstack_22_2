@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            line-height: 1.5;
+            list-style:none;
+        }
+
+        .wrap{
+            width:1200px;
+            margin:0 auto;
+        }
+
+        .container{
+            padding:10px 0;
+            display:flex;
+
+            /* 시작점과 끝점을 배치후 중간 배치 */
+            justify-content: space-between;
+        }
+
+        .container .tab, .container section{
+            width:32%;
+        }
+
+        .tab{
+            display:flex;
+        }
+
+        .tab section{
+            width:49.5%;
+        }
+
+        .tab .sec-tit a{
+            background:#f0f0f0;
+            text-align: center;
+            display:block;
+        }
+
+        .tab .on .sec-tit a{
+            background:tomato;
+            color:#fff;
+        }
+
+        .align .box ul li{
+            border:1px solid #ccc;
+            background-color: #ccc;
+            margin:10px;
+            width:170px;
+            height:80px;
+            border-radius: 15px;
+            display:flex;
+            flex-direction: column;
+            flex-wrap:wrap;
+            justify-content: flex-start;
+            float:left;
+            padding-top:0px;
+            align-items: center;
+        }
+
+        .box li a{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <img src="images/slide.jpg">
+        <div class="container">
+            <div class="tab">
+                <section class="on">
+                    <h2 class="sec-tit">
+                        <a href="#">공지사항</a>
+                    </h2>
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="#">2021년 2월 무이자 할부 카드 안내 2021년 2월 무이자 할부 카드 안내</a>
+                            </li>
+                            <li>
+                                <a href="#">쿠폰 사용 안내 2021년 2월 무이자 할부 카드 안내</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="sec-tit">
+                        <a href="#">갤러리</a>
+                    </h2>
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="#">2021년 2월 무이자 할부 카드 안내 2021년 2월 무이자 할부 카드 안내</a>
+                            </li>
+                            <li>
+                                <a href="#">쿠폰 사용 안내 2021년 2월 무이자 할부 카드 안내</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <secton>
+                <div>
+                    <a href="#">
+                        <img src="images/banner.jpg">
+                    </a>
+                </div>
+            </secton>
+            <section class="align">
+                <div class="box">
+                    <ul>
+                        <li>
+                            <a href="#">나의 계정</a>
+                        </li>
+                        <li>
+                            <a href="#">헤이 음악</a>
+                        </li>
+                        <li>
+                            <a href="#">계정 추가</a>
+                        </li>
+                        <li>
+                            <a href="#">클라우드</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var box;    //box 변수 선언
+        document.write(box+"<br>");    //undefined : 선언만 했을 때
+
+        box=100;    
+        document.write(box+"<br>");
+
+        var box=100;    //변수 선언과 초기값 동시에
+        box=30; //값이 계속 바뀔 수 있음
+        var box=50; //자바에서는 오류 (변수 두 번 선언)
+        document.write(box);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
