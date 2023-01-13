@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var n=prompt("2자리 정수 입력(10~99)>>");
+
+        // 십의 자리수
+        var ten=Math.floor(n/10);
+        // 일의자리수
+        var one=n%10;
+
+        var msg_1="Yes! 10의 자리와 1의 자리가 같습니다.";
+        var msg_2="No! 10의 자리와 1의 자리가 다릅니다.";
+
+        var ten_one = ten==one?msg_1:msg_2;
+
+        document.write(ten_one);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

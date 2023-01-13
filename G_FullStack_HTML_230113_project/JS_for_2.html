@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: #f00;
+        }
+
+        .blue{
+            color:#00f;
+        }
+
+        .aqua{
+            color:#0ff;
+        }
+    </style>
+
+    <script>
+        // 1에서 100까지 1씩 증가
+        for (var i = 1; i <= 100; i++) {
+            if (i % 5 == 0 && i % 7 != 0) {
+                document.write("<p class='red'>" + i + "</p>");
+            }else if(i % 7 == 0 && i % 5 != 0){
+                document.write("<p class='blue'>"+i+"</p>");
+            }else if(i % 7 == 0 && i % 5 == 0){
+                document.write("<p class='aqua'>"+i+"</p>");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

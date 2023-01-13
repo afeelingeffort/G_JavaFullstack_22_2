@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var n=prompt("3자리 정수 입력(100~999)>>");
+
+        var hun=Math.floor(n/100%100);
+        var ten=Math.floor(n/10%10);
+        var one=n%10;
+
+        var sum=hun+ten;
+        var mul=ten*one;
+
+        document.write(n+"을(를) 입력하셨습니다.","<br>");
+        document.write("100의 자리와 10의 자리의 합은 "+sum,"<br>");
+        document.write("10의 자리와 1의 자리의 곱은 "+mul);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
