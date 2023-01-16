@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //초를 입력받아서, 시/분/초 구하기
+        // 초/3600=시간, 초%60=초, (초/60)%60=분
+
+        var time=prompt("정수를 입력하세요:");
+        
+        var hour=Math.floor(time/3600);
+        var minute=Math.floor(time/60)%60;
+        var second=Math.floor(time%60);
+        
+        document.write(time+"초는 "+hour+"시간, "+minute+"분, "+second+"초입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

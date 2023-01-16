@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 3, 5, 8의 배수인데 
+        // 어느 배수도 아니다, ture/false(하나라도 배수면 참 아니면 거짓)
+        // 1개~ 3개까지 배수이다.가 출력(로직 고려)
+        // if~else if~else : 로직복잡
+        // if문만으로 쪼개서 구현
+
+        var multiple=false;
+        var a=prompt("양의 정수를 입력하세요:","0");
+
+        if(a%3==0){
+            document.write("3의 배수이다.","<br>");
+            multiple=true;
+        }
+        
+        if(a%5==0){
+            document.write("5의 배수이다.","<br>");
+            multiple=true;
+        }
+        
+        if(a%8==0){
+            document.write("8의 배수이다.");
+            multiple=true;
+        }
+
+        if(multiple==false){
+            document.write("어느 배수도 아니다.");
+        }
+</script>
+</head>
+<body>
+    
+</body>
+</html>

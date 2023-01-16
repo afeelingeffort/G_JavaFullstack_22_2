@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //369 게임을 간단히 작성해보자.
+        //10~99까지의 정수를 입력받고 정수에 3, 6, 9 중 하나가 있는 경우는
+        //박수짝짝, 박수짝, 박수없음 출력.
+
+        var num = prompt("10~99사이의 정수를 입력하시요>>");
+        var a;  //10의 자리
+        var b;  //1의 자리
+        var cnt=0;  //박수 몇번 칠건지
+
+        a=Math.floor(num/10);
+        b=num%10;
+
+        if(a%3==0){
+            cnt++;
+        }
+
+        if(b%3==0&&b!=0){
+            cnt++;
+        }
+
+        if(cnt==2){
+            document.write("박수짝짝");
+        }else if(cnt==1){
+            document.write("박수짝");
+        }else{
+            document.write("박수없음");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

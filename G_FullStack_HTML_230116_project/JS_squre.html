@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //n의 값을 입력받아 1에서 n까지의 정수의 제곱을 구하는 프로그램 작성하기.
+
+        var n = prompt("n 값을 입력하세요:");
+
+        document.write("[");
+        for (var i = 1; i <= n; i++) {
+            if(i==n){
+                document.write(i*i);
+            }else{
+                document.write(i*i+", ");
+            }
+        }
+        document.write("]");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

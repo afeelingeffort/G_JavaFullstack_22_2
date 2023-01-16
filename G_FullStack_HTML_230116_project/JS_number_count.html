@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //0에서 999까지의 숫자를 입력받아 입력된 숫자의 자리수를 구하는 프로그램을 작성
+        var result = prompt("수를 입력하세요:");
+
+        if (result>=0&&result<=9) {
+            document.write(result + "은(는) 한자리 숫자이다.");
+        } else if (result>=10&&result<=99) {
+            document.write(result + "은(는) 두자리 숫자이다.");
+        } else if (result>=100&&result<=999) {
+            document.write(result + "은(는) 세자리 숫자이다.");
+        } else {
+            document.write("오류! " + result + "은(는) 범위(0~999) 이외의 숫자이다.");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

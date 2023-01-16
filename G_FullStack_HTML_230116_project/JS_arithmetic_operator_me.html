@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //초 단위의 정수를 입력받고, 몇 시간, 몇 분, 몇 초인지 출력하는 프로그램
+
+        var time=prompt("정수를 입력하세요:","0");
+
+        var hour=0;
+        var minute=0;
+        var second=0;
+
+        hour=Math.floor(time/(60*60));
+        minute=Math.floor(time/60-(hour*60));
+        second=Math.floor(time%60);
+
+
+        document.write(time+"초는 "+hour+"시간 "+minute+"분 "+second+"초입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
