@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //while문을 이용하여 1~100 정수 중 홀수의 누적 합계를 구하는 프로그램을 작성하라.
+        //1 4 9 16 25 36 49 ...
+        var sum=0;
+        var cnt = 0;
+
+        for(var i=1; i<=100; i++){
+            if(i%2==1){
+                sum+=i;
+                cnt++;
+                document.write(sum+" ");
+                
+            }
+
+            if(cnt%10==0){
+                document.write("<br>");
+            }
+        }
+            
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
