@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 가구수를 입력받아 100달러권, 10달러권 각 몇 개로 변환되는지 출력
+        // 1인 가구:40만원, 2인 가구:60만원, 3인 가구:80만원, 4인 이상 가구:100만원
+        // $1=1200원 기준
+
+        var hundred=120000; //100달러
+        var ten=12000;  //10달러
+        var res;    //100달러와 10달러 몇매?
+        var money;  //가구수에 따른 금액
+        var num;    //가구수 입력
+
+        var num=prompt("가구수를 입력하시오>>");
+        
+        if(num==1){
+            money=400000;
+        }else if(num==2){
+            money=600000;
+        }else if(num==3){
+            money=800000;
+        }else {
+            money=1000000;
+        }
+
+        res=Math.floor(money/hundred);
+        if(res>0){
+            document.write("100달러짜리 "+res+"매","<br>");
+        }
+
+        money=money%hundred;
+        res=Math.floor(money/ten);
+        if(res>0){
+            document.write("10달러짜리 "+res+"매","<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

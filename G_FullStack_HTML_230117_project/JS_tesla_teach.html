@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 테슬라 주식 매수
+        // 테슬라 주식 매수 수량을 입력받아 100달러권, 10달러권 각 몇 매로 변환되는지 출력
+        // 단, 기준은 테슬라 1주는 520달러
+
+        var tesla=520;  //1주는 520달러
+        var result; //100달러와 10달러 몇매?
+        var money;  //1주*매수
+        var num;    //주식 매수 수량 입력 받음
+
+        var num=prompt("매수 수량을 입력하세요>>");
+        money=tesla*num;
+
+        result=Math.floor(money/100);
+        if(result>0){
+            document.write("100달러짜리 "+result+"매","<br>");
+        }
+
+        money=money%100;
+        result=Math.floor(money/10);
+        if(result>0){
+            document.write("10달러짜리 "+result+"매");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
