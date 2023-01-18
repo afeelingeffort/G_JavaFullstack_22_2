@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //자바스크립트는 배열로 다양한 데이터를 가질 수 있음(자바는 오류)
+        var arr=[30, "따르릉", true];
+
+        document.write("<h3>배열값 가져오기-1</h3>");
+        // document.write(arr);    //배열 전체값 출력
+        document.write(arr[0],"<br>");  //0번째 인덱스는 첫번째 값
+        document.write(arr[1],"<br>");
+        document.write(arr[2],"<br>");
+
+
+        document.write("<h3>배열값 가져오기-2</h3>");
+        for(i=0; i<arr.length; i++){
+            document.write(arr[i],"<br>");  //배열의 인덱스를 이용해서 출력
+        }
+
+
+        document.write("<h3>배열값 가져오기-3</h3>");
+        for(var i in arr){
+            document.write(arr[i],"<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

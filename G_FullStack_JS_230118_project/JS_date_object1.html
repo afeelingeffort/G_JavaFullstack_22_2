@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 날짜 객체 생성 => today 참조변수가 가리킴
+        var today=new Date();   //Date 객체는 자바에서도 있음
+
+        //getMonth 메소드를 nowMonth 변수로 저장
+        //getMonth 메소드는 현재 달을 가져오는 기능
+        //컴퓨터가 사용하는 달은 0~11(+1이 필요)
+        var nowMonth=today.getMonth()+1; 
+
+        var nowDate=today.getDate();
+
+        //일,월,화,수,목,금,토
+        //0,1,2,3,4,5,6
+        var nowDay=today.getDay();
+
+        // 배열 생성
+        // 배열에는 인덱스가 존재(0에서 시작)
+        var week=new Array("일","월","화","수","목","금","토"); //배열을 week 참조변수로 받음
+
+        document.write("<h1>오늘 날짜 정보</h1>");
+        document.write(today,"<br>");  //현재날짜, 시간 정보 출력
+        document.write("현재 월 : "+nowMonth, "<br>");
+        document.write("현재 일 : "+nowDate, "<br>");
+        // document.write("현재 요일 : "+nowDay, "<br>");
+        document.write("현재 요일 : "+week[nowDay], "<br>");
+
+
+        //Date객체를 worldCup 참조변수가 가리킴
+        var worldCup=new Date(2002, 4, 31);   //Date 객체는 자바에서도 있음
+        var theMonth=worldCup.getMonth()+1;
+        var theDate=worldCup.getDate();
+        var theDay=worldCup.getDay();
+
+        document.write("<h1>월드컵 날짜 정보</h1>");
+        // document.write(worldCup);
+        document.write("2002년 월드컵 몇 월 : "+theMonth, "<br>");
+        document.write("2002년 월드컵 몇 일 : "+theDate, "<br>");
+        document.write("2002년 월드컵 무슨 요일 : "+week[theDay], "<br>");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

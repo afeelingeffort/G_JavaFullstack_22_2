@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var greeArr=["교대","방배","강남"];
+        var yellowArr=["미금","정자","수서"];
+
+        greeArr.splice(2,1,"서초","역삼");  //인덱스 2에서 1개를 삭제하고 서초, 역삼 추가
+        console.log(greeArr);
+
+        //미금, 정자
+        var data1=yellowArr.pop();  //마지막 배열값인 수서를 잘라내어 data1에 저장
+        //정자
+        var data2=yellowArr.shift();    //첫번째 배열값인 미금을 잘라내어 data2에 저장
+        //정자, 미금
+        yellowArr.push(data2);
+        console.log(yellowArr);
+
+        
+        //수서, 정자, 미금
+        yellowArr.unshift(data1);
+        console.log(yellowArr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

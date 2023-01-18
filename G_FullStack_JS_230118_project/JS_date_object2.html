@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var today=new Date();
+
+        //getFullYear 메소드는 현재 년도를 반환
+        var nowYear=today.getFullYear();
+
+        var theDate=new Date(nowYear, 11, 31);
+        var theDateTime=theDate.getTime();
+        var todayTime=today.getTime();
+        var diffDate=theDate.getTime()-today.getTime();
+        // var result=diffDate / 1000;      //초로 계산
+        // var result=diffDate / (1000*60); //분으로 계산
+        // var result=diffDate / (1000*60*60); //시로 계산
+        var result=Math.floor(diffDate / (1000*60*60*24)); //일로 계산
+
+        // document.write(today, "<br>");
+        // document.write(nowYear, "<br>");
+        // document.write(theDate,"<br>");
+
+        // 1970년 1월 1일 0시 0분 0초부터 밀리초로 계산
+        // document.write(theDateTime,"<br>"); //1703948400000
+        // document.write(todayTime,"<br>");   //1674012115643
+        // document.write(diffDate,"<br>");    //29936141340
+        // document.write(result,"<br>");  //29935998.364
+        // document.write(result,"<br>");  //498931.0898166667
+        // document.write(result,"<br>");  //8315.500683611112
+        document.write("<h1>오늘부터 올해 연말까지 남은 날짜</h1>");
+        document.write("D-day "+result+"일 남았습니다.","<br>");  //346
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

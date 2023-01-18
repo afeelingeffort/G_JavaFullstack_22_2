@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Object 객체 생성
+        // new Object();
+
+        //Object 객체 생성 => tv : 참조변수(객체 이름)
+        var tv = new Object();    //1번 방식으로 객체 생성(자바와 비슷)
+
+        // 객체 생성했으면 메소드나 속성을 추가할 수 있다.
+        tv.color = "white";   //color 속성에 흰색을 부여함.
+        tv.price = 300000;    //price 속성에 30만원 부여함.
+
+        tv.info = function () { //메소드 구현(tv 객체에 메소드 구현)
+            document.write("tv 색상 : " + this.color, "<br>"); //this는 자기자신의 객체(tv 객체)
+            document.write("tv 가격 : " + this.price, "<br>");
+        }
+
+        document.write("<h1>tv 객체 메소드 호출</h1>");
+        tv.info();  //메소드 구현(tv 객체에 메소드 호출)
+
+
+
+        var car = {   //2번 방식으로 객체 생성(자바와 다름)
+            color: "black",
+            price: 5000000,
+
+            info: function () {
+                document.write("car 색상 : " + this.color, "<br>"); //this는 자기자신의 객체(car 객체)
+                document.write("car 가격 : " + this.price, "<br>");
+            }
+        };
+
+        document.write("<h1>car 객체 메소드 호출</h1>");
+        car.info();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

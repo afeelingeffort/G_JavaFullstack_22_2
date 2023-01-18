@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var userEmail=prompt("당신의 이메일 주소는?");
+        var arrUrl=[".co.kr",".com",".net",".or.kr",".go.kr"];
+        var check1=false;
+        var check2=false;
+
+        // 두번째부터 @가 나와야 참
+        if(userEmail.indexOf("@")>0){
+            check1=true;
+        }
+
+        // 배열의 갯수만큼 반복
+        for(var i=0; i<arrUrl.length; i++){
+            // 두번째부터  배열의 값이 나와야 참
+            if(userEmail.indexOf(arrUrl[i])>0){
+                check2=true;
+            }
+        }
+
+        // 두개다 참이어야 입력받은 이메일 출력
+        if(check1&&check2){
+            document.write(userEmail);
+        }else{
+            alert("이메일 형식이 잘못되었습니다.");
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

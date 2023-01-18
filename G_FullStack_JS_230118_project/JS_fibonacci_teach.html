@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //피보나치수열 An=An-1+An-2
+        //1 1 2 ...
+        var n=prompt("정수는?");
+        var prevNum=1;  //An-1 이전 수
+        var prevPrevNum=1;  //An-2 이전의 이전 수
+
+        document.write(prevPrevNum+" ");
+        document.write(prevNum+" ");
+        // ex) 1 1 2 3 5 8 13 21 34 55=> 10개인 경우(2개 미리 출력)
+
+        for(var i=3; i<=n; i++){    //이전의 이전수, 이전수를 빼고 반복
+            var nNum=prevNum+prevPrevNum;   //현재수=이전의 이전수+이전수
+            document.write(nNum+" ");   //현재수 출력
+            prevPrevNum=prevNum;    //이전수를 이전의 이전수로 저장
+            prevNum=nNum;   //현재수를 이전수로 저장
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

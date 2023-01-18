@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //피보나치 수열
+        //피보나치 수열이란 n번째 숫자와 n1번째 숫자를 더한 값이 n2번째 숫자로 나타내는 수열이며,
+        //기본생성규칙은 처음 두항의 숫자가 1이라는 것이다. 그래서 세번째항은 1+1의 값인 2가 된다.
+        
+        var num = prompt("정수는?");
+
+        var opp1 = 1;
+        var opp2 = 1;
+        var opp3;
+        
+        document.write(a1+" ");
+        document.write(a2+" ");
+        
+        for(var i=3; i<=num; i++){
+            opp3=opp1+opp2;
+            document.write(opp3+" ");
+            opp1=opp2;
+            opp2=opp3;
+        }    
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
