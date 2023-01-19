@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //5개의 정수를 입력하세요>>
+        //평균은 ~ (합계/갯수)
+        var intArray=new Array(5);
+        var sum=0;
+
+        for(var i=0; i<intArray.length; i++){
+            var number=prompt("5개의 정수를 입력하세요>>");
+            intArray[i]=parseInt(number);
+            sum+=intArray[i];   //배열 값을 누적
+        }
+
+        document.write("평균은 "+sum/intArray.length);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

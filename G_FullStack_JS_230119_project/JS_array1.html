@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var number=prompt("양수?");
+
+        // var intArray;
+        // document.write(intArray,"<br>");   //undefined
+        // document.write("=============================","<br>");
+
+        // var intArray=new Array(5);  //크기가 5인 배열 생성
+        // document.write(intArray,"<br>");   //,,,, (5개의 값이 없음)
+        // document.write("=============================","<br>");
+
+        var intArray=new Array(5);  //크기가 5인 배열 생성
+        // 입력받은 수는 문자로 인식하기에 parseInt 함수를 사용해서 숫자로 변환
+        intArray[0]=parseInt(number);
+        intArray[2]=5;
+        var intSum=intArray[0]+intArray[2];
+        // document.write(intArray,"<br>");   //3,,5,,
+        document.write(intSum,"<br>");   //8
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

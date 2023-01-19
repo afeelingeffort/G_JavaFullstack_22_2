@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 양수를 입력하세요 : 5번 반복
+        // 가장 큰 수는 ~ 입니다. 출력
+
+        var intArray=new Array(5);  //양수 5개 저장
+        var max=0;  //가장 큰 수
+
+        for(var i=0; i<intArray.length; i++){
+            var number=prompt("양수를 입력하세요.");
+            intArray[i]=parseInt(number); //인덱스 i:0~4로 저장
+
+            if(intArray[i]>max){    //배열 값이 max보다 크면
+                max=intArray[i];    //max에 저장
+            }
+            document.write(intArray[i],"<br>");
+        }
+        document.write("가장 큰 수는 "+max+"입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

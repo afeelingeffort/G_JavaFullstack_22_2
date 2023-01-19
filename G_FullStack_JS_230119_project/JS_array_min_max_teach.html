@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 양수 10개를 입력하세요.
+        // 가장 작은 수는 ~이고, 가장 큰 수는 ~이고,
+        // 최소값+최대값은 ~입니다.
+
+        var intArray=new Array(10);
+        var min=0;
+        var max=0;
+
+        for(var i=0; i<intArray.length; i++){
+            var number=prompt("양수 10개를 입력하세요.");
+            intArray[i]=parseInt(number);
+
+            if (i == 0) {   //첫번째 값인 경우
+                min = intArray[i];  //최소값으로 저장
+            } else {    //아닌 경우
+                if (intArray[i] < min) {    //비교해서 저장
+                    min = intArray[i];
+                }
+            }
+
+            if(intArray[i]>max){    //배열 값이 max보다 크면
+                max=intArray[i];    //max에 저장
+            }
+        }
+
+        document.write("가장 작은 수는 "+min+"이고, 가장 큰 수는 "+max+"이고, 최소값+최대값은 "+(min+max)+"입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 양의 정수 10개를 입력하시오>>
+        // 3의 배수는 ~
+
+        var intArray=new Array(10);
+
+        for(var i=0; i<intArray.length; i++){
+            var number=prompt("양의 정수 10개를 입력하시오>>");
+            intArray[i]=parseInt(number);
+        }
+
+        document.write("3의 배수는 ");
+        for(var i=0; i<intArray.length; i++){
+            if(intArray[i]%3==0){
+                document.write(intArray[i]+" ");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

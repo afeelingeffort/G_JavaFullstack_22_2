@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 양수 7개 입력?
+        // 가장 작은 수는 ~입니다.
+
+        var intArray = new Array(7);
+        var min = 0;
+
+        for (var i = 0; i < intArray.length; i++) {
+            intArray[i] = prompt("양수 7개를 입력하세요.");
+
+            if (i == 0) {   //첫번째 값인 경우
+                min = intArray[i];  //최소값으로 저장
+            } else {    //아닌 경우
+                if (intArray[i] < min) {    //비교해서 저장
+                    min = intArray[i];
+                }
+            }
+            document.write(intArray[i] + "<br>");
+        }
+        document.write("가장 작은 수는 " + min + "입니다.");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

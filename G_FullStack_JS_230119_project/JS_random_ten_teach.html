@@ -1,0 +1,35 @@
+<!-- 꼭 복습하기 !!!!!!!!!!! -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 정수 10개 배열, 1~10 난수 저장
+        // 랜덤한 정수들 : ~
+        // 평균은 ~
+
+        var intArray=new Array(10);
+        var sum=0;
+        var rNumber;
+
+        for(var i=0; i<intArray.length; i++){
+            var rNumber=Math.floor(Math.random()*10)+1;
+            intArray[i]=parseInt(rNumber);
+            sum+=intArray[i];
+        }
+        
+        document.write("랜덤한 정수들 : ");
+        for(var i=0; i<intArray.length; i++){
+            document.write(intArray[i]+" ");
+        }
+
+        document.write("평균은 "+sum/intArray.length);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

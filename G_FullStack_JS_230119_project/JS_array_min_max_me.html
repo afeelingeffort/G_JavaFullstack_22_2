@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var intArr = new Array(10);
+        var min = 0;
+        var max = 0;
+
+        for (var i = 0; i < intArr.length; i++) {
+            var number = prompt("양수 10개를 입력하세요.");
+            intArr[i]=parseInt(number);
+
+            if (i == 0) {
+                min = intArr[i];
+            } else {
+                if (intArr[i] < min) {
+                    min = intArr[i];
+                }
+            }
+
+            if (max < intArr[i]) {
+                max = intArr[i];
+            }
+        }
+
+        document.write("가장 작은 수는 " + min + "이고, 가장 큰 수는 " + max + "이고, " + "최소값+최대값은 " + (min+max) + "입니다.");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

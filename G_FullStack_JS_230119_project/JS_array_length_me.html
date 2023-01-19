@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var intArray=new Array(5);
+        var sum=0;
+        var avg=0;
+
+        for(var i=0; i<intArray.length; i++){
+            intArray[i]=prompt("정수를 입력하세요>>");
+            document.write(intArray[i]+" ");
+        }
+
+        document.write("<br>");
+        for(var i=0; i<intArray.length; i++){
+            sum+=parseInt(intArray[i]);
+        }
+        avg=sum/intArray.length;
+
+        document.write("평균은 "+avg);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
