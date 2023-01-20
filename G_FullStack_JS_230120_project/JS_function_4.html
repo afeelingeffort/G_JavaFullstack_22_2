@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var rightId="korea";
+        var rightPw="1234";
+
+        var userId=prompt("아이디를 입력하세요.");
+        var userPw=prompt("패스워드를 입력하세요.");
+        
+        // 일반함수라 호이스팅 이용
+        login(userId, userPw); //매개변수 이름이 다르면 오류
+
+        function login(id, pw){ //매개변수 이름이 달라도 됨
+            if(id==rightId){
+                // alert("존재하는 아이디입니다.");
+                if(pw==rightPw){
+                    document.write(id+"님 방문을 환영합니다.");
+                }else{
+                    alert("잘못된 비밀번호입니다.");
+                }
+            }else {
+                alert("존재하지 않는 아이디입니다.");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

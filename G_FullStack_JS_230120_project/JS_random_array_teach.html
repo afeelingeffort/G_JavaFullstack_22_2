@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 정수 몇개? => 갯수만큼 난수 발생(1~100)
+        // 10개씩 끊어서 출력하고 다음행
+
+        var number = prompt("정수 몇개?");
+        var n = parseInt(number);
+        // 정수 크기의 배열을 생성해서 배열 크기만큼 반복하면서 난수 발생
+        var intArray = new Array(n);    //n크기의 배열 생성해서 intArray 참조변수 가리킴
+        var cnt = 0;
+
+        for (var i = 0; i < intArray.length; i++) {
+            var r = Math.floor(Math.random() * 100) + 1;
+            intArray[i] = r;
+        }
+        //반복이 끝나면 입력받은 정수만큼 난수가 배열에 저장됨
+
+        for (var i = 0; i < intArray.length; i++) {
+            if (i == 0) {
+                document.write(intArray[i] + " ");
+            } else {
+                if (i % 10 == 0) {
+                    document.write("<br>");
+                }
+                document.write(intArray[i] + " ");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

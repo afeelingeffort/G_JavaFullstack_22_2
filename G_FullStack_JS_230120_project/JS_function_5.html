@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arrSubject=["국어", "영어", "수학"];
+
+        var result=testAvg(arrSubject);
+
+        // 매개변수로 배열이 오면 많은 데이터를 간단하게 처리 가능
+        function testAvg(arrData){ //arrSubject를 arrData로 받음
+            var sum=0;
+
+            for(var i=0; i<arrSubject.length; i++){
+                // sum+=prompt("점수는?"); //문자로 인식됨
+                sum+=Number(prompt(arrData[i]+"점수는?"));
+            }
+            var avg=sum/arrData.length;
+            // document.write("4443");
+            // 반환값을 변수(result)로 받을 수 있음
+            return avg; //01244437777
+            // break; //아무것도 안나옴
+            
+            // document.write("7777");
+        }
+        // document.write("7777");
+        document.write("평균은 "+result+"점입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var number = prompt("정수 몇개?");
+        var n=parseInt(number);
+        var intArray = new Array(n);
+        var cnt=0;
+
+        for(var i=0; i<intArray.length; i++){
+            intArray[i] = Math.floor(Math.random() * 100) + 1;
+
+            if(n==intArray.length){
+                document.write(intArray[i]+" ");
+                cnt++;
+            }
+
+            if(cnt%10==0){
+                document.write("<br>");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

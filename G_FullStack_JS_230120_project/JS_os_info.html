@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // navigator 객체의 userAgent 속성
+        var info=navigator.userAgent.toLowerCase();
+        var osImg=null;
+
+        // Windows, Chrome => 운영체제와 브라우저 정보
+        // document.write(info);
+
+        if(info.indexOf("windows")>=0){
+            osImg='windows.png';
+        }else if(info.indexOf("android")>=0){
+            osImg='android.png';
+        }else if(info.indexOf("macintosh")>=0){
+            osImg='macintosh.png';
+        }else if(info.indexOf("iphone")>=0){
+            osImg='iphone.png';
+        }
+
+        // <img src="images/osImg">
+        document.write("<img src='images/"+osImg+"'><br>");
+
+        document.write("모니터 해상도 너비 : "+screen.width +"px","<br>");
+        document.write("모니터 해상도 높이 : "+screen.height +"px","<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

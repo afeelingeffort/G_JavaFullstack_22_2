@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 객체의 생성자 함수(객체 생성할 때 사용) 
+        // =>자바에서는 없는 개념(속성, 메소드는 자바에서 같은 개념: 형식은 속성은 같고 메소드는 다름)
+        function CheckWeight(name, height, weight){
+            // 객체의 속성 선언
+            // this.userName; //자기자신 객체에 userName 속성을 가진다.
+            this.userName=name; //name을 userName에 저장(대입)
+            this.userHeight=height;
+            this.userWeight=weight;
+            this.minWeight;
+            this.maxWeight;
+
+            // 객체의 메소드 구현
+            this.getInfo=function(){ //2.getInfo() 호출됨.
+                // var str="테스트";
+                // str+="테스트";
+                var str="";
+                str+="이름 : "+this.userName+"<br>";
+                str+="키 : "+this.userHeight+"<br>";
+                str+="몸무게 : "+this.userWeight+"<br>";
+                return str; //3.테스트를 반환
+            }
+
+            this.getResult=function(){
+                this.minWeight=(this.userHeight-100)*0.9-5;
+                this.maxWeight=(this.userHeight-100)*0.9+5;
+
+                if(this.userWeight>=this.minWeight && this.userWeight<=this.maxWeight){
+                    return "정상 몸무게입니다.";
+                } else if(this.userWeight<this.minWeight){
+                    return "정상 몸무게보다 미달입니다.";
+                } else{
+                    return "정상 몸무게보다 초과입니다.";
+                }
+            }
+        }
+        // CheckWeight : 객체 생성자 함수(자바에서는 클래스와 비슷)
+        // new CheckWeight("장보리", 168, 62); //객체 생성자 함수를 사용해서 객체 생성
+        var jang=new CheckWeight("장보리", 168, 62); //jang은 배열객체처럼 참조변수가 됨
+        var park=new CheckWeight("박달재", 180, 58);
+        console.log(jang);
+        console.log(park);
+        
+        document.write(jang.getInfo()); //1.getInfo()호출, 4. 테스트를 출력
+        document.write(jang.getResult(),"<br>");
+        
+        document.write(park.getInfo());
+        document.write(park.getResult(),"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
