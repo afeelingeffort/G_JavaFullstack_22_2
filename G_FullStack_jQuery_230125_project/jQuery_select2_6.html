@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            // .slice(1,3) : 인덱스 1번에서 3번 앞까지 선택
+            // $("#menu1 li").slice(1,3).css({
+            //     "background-color":"#ff0"
+            // });
+
+            // menu1 아이디의 하위 요소에 ul이 없음
+            // $("#menu1 ul").slice(1,3).css({
+            //     "background-color":"#ff0"
+            // });
+
+            // menu1 아이디에서 인덱스 0만 존재
+            // $("#menu1").slice(1,3).css({
+            //     "background-color":"#ff0"
+            // });
+
+            // slice(1,3) : 인덱스 1번에서 3번 앞에까지 선택
+            $("li").slice(1,3).css({
+                "background-color":"#ff0"
+            });
+
+            // li 요소가 하나일 때만 선택
+            $("li:only-child").css({
+                "background-color":"#0ff"
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu1">
+        <li>내용1-1</li>
+        <li>내용1-2</li>
+        <li>내용1-3</li>
+        <li>내용1-4</li>
+    </ul>
+    <ul id="menu2">
+        <li>내용2-1</li>
+        <li>내용2-2</li>
+    </ul>
+</body>
+</html>

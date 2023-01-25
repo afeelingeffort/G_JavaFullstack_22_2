@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            // li:nth-child(1) : li 요소에서 첫번째 요소
+            $("#menu1 li:nth-child(1)").css({
+                "background-color":"#ff0"
+            });
+
+            // li:nth-child(2n) : li 요소에서 짝수번째 요소
+            $("#menu1 li:nth-child(2n)").css({
+                "border":"2px dashed #f00"
+            });
+
+            // li:nth-last-child(1) : li 요소에서 뒤에서 첫번째 요소
+            // li:nth-last-child(4) : 네번째 요소는 없음
+            // li:nth-last-child(0) : 0번째 요소는 없음
+            $("#menu2 li:nth-last-child(1)").css({
+                "background-color":"#0ff"
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu1">
+        <li>내용1-1</li>
+        <li>내용1-2</li>
+        <li>내용1-3</li>
+        <li>내용1-4</li>
+    </ul>
+    <ul id="menu2">
+        <li>내용2-1</li>
+        <li>내용2-2</li>
+        <li>내용2-3</li>
+    </ul>
+    <ul id="menu3">
+        <li>내용3-1</li>
+        <li>내용3-2</li>
+        <li>내용3-3</li>
+    </ul>
+</body>
+</html>

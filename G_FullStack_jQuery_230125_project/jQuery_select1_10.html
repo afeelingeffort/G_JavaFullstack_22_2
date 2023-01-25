@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            // $(".txt").css({
+            //     "background-color":"#0ff"
+            //     ,"border":"2px solid #f00"
+            // });
+
+            // 제이쿼리 스타일을 변수로 처리
+            var style_1={
+                "background-color":"#0ff"
+                ,"border":"2px solid #f00"
+            }
+            // $(".txt").css(style_1);
+
+            // .prev() : 이전 요소 선택
+            $(".txt").prev().css(style_1);
+
+            var style_2={
+                "background-color":"#ff0"
+                ,"border":"2px dashed #f00"
+            }
+            // $(".txt").css(style_2);
+
+            // +는 다음 요소(다음에 p 가 없으면 못찾음 => 다음 다음은 안 넘어감)
+            // $(".txt+p").css(style_2);
+
+            // $(".txt+h3").css(style_2);
+
+            // .next() : 다음 요소 선택 (갯수만큼 다음으로 넘어감)
+            $(".txt").next().next().css(style_2);
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <p class="txt">내용2</p>
+        <h3>내용3</h3>
+        <p>내용4</p>
+    </div>
+</body>
+</html>

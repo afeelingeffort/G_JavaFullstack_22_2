@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            var style_1={
+                "background-color":"#0ff"
+                ,"border":"2px solid #f00"
+            }
+            
+            var style_2={
+                "background-color":"#ff0"
+                ,"border":"2px dashed #f00"
+            }
+
+            // .prevAll() : 모든 이전 요소
+            $(".txt").prevAll().css(style_1);
+
+            // .nextAll() : 모든 다음 요소
+            $(".txt").nextAll().css(style_2);
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <p class="txt">내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+    </div>
+</body>
+</html>

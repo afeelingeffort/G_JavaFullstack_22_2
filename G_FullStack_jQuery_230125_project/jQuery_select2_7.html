@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            var obj=["서울","부산","전주"];
+
+            // each 메소드 : 배열 정보를 가져옴
+            $(obj).each(function(i,o){
+                // i : 인덱스(0~2)
+                // alert(i);
+
+                // o : 배열에 저장된 값(요소, 원소)
+                console.log(i+":"+o);
+            });
+            console.log("=== The End ===");
+
+            // $.each($("#menu1"), function(i, o){
+            //     // console.log(i+":"+o);
+                
+            //     // console.log(i); // i : 0
+
+            //     console.log(o); // o : 태그의 내용
+            // });
+
+            $.each($("#menu1 li"), function(i, o){
+                console.log(o); // o : textContent에 태그의 내용
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu1">
+        <li>내용1-1</li>
+        <li>내용1-2</li>
+    </ul>
+</body>
+</html>
