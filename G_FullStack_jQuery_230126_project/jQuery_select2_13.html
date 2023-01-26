@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            // contains(내용1) : 내용1을 포함하는 요소 선택
+            $("#inner_1 p:contains(내용1)").css({
+                "background-color":"#ff0"
+            });
+
+            // has(strong) : strong을  포함하는 요소 선택
+            $("#inner_1 p:has(strong)").css({
+                "background-color":"#0ff"
+            });
+
+            // has(내용1) : <내용1>을 포함하는 요소를 못찾음
+            // $("#inner_1 p:has(내용1)").css({
+            //     "background-color":"#0ff"
+            // });
+
+            // contains(span) : <span>을 포함하는 요소를 못찾음
+            // $("#inner_1 p:contains(span)").css({
+            //     "background-color":"#ff0"
+            // });
+
+            // $("#outer_wrap").css({
+            //     "border":"1px dashed #00f"
+            // });
+
+            // contents() : 자식 요소들만 선택(손자들은 제외)
+            $("#outer_wrap").contents().css({
+                "border":"1px dashed #00f"
+            });
+
+            // .not(":first") : 첫번째가 아닌 것
+            $("#inner_2 p").not(":first").css({
+                "background-color":"#0f0"
+            });
+
+            // .eq(2) : 인덱스가 2인 것
+            // .end() : 앞에 필터링(검색이나 인덱스)을 취소
+            $("#inner_2 p").eq(2).end().css({
+                "color":"#f00"
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="outer_wrap">
+        <h1>콘텐츠 탐색 선택자</h1>
+        <section id="inner_1">
+            <h1>contains(), contents(), has()</h1>
+            <p><span>내용1</span></p>
+            <p><strong>내용2</strong></p>
+            <p><span>내용3</span></p>
+        </section>
+        <section id="inner_2">
+            <h1>not(), end()</h1>
+            <p><span>내용4</span></p>
+            <p><strong>내용5</strong></p>
+            <p><span>내용6</span></p>
+        </section>
+    </div>
+</body>
+</html>

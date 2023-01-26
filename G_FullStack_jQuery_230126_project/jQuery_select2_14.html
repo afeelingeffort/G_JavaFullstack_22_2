@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            // .find(".txt1") : 하위 요소에서 해당 클래스를 선택
+            $("#inner_1").find(".txt1").css({
+                "background-color":"#ff0"
+            });
+
+            // .filter(".txt2") : inner_1 아이디의 p요소에서 해당 클래스 선택(하위가 아님)
+            $("#inner_1 p").filter(".txt2").css({
+                "background-color":"#0ff"
+            });
+
+            // filter를 함수를 사용해서 처리
+            $("#inner_2 p").filter(function(idx, obj){
+                // idx : 인덱스 
+                console.log(idx);
+
+                // return 인덱스로 요소가 선택
+                // return idx; //idx가 1, 2, 3 선택 (0이 선택 안됨)
+                return idx%2==0; //idx가 0, 2 선택
+            })
+                .css({"background-color":"#0f0"});
+        });
+    </script>
+</head>
+<body>
+    <div id="outer_wrap">
+        <h1>콘텐츠 탐색 선택자</h1>
+        <section id="inner_1">
+            <h2>find(), filter()</h2>
+            <p class="txt1">내용1</p>
+            <p class="txt2">내용2</p>
+        </section>
+        <section id="inner_2">
+            <h2>filter(function)</h2>
+            <p>index 0</p>
+            <p>index 1</p>
+            <p>index 2</p>
+            <p>index 3</p>
+        </section>
+    </div>
+</body>
+</html>

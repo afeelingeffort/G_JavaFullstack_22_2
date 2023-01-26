@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            var $txt1=$(".txt_1 span");
+            var $txt2=$(".txt_2 span");
+            var $box=$(".box");
+
+            var off_t=$box.offset().top;
+            var pos_t=$box.position().top;
+
+            // #box_wrap의 margin:50px + box클래스의 top:50px;
+            $txt1.text(off_t); //100
+
+            // box클래스의 top:50px;
+            $txt2.text(pos_t); //50
+        });
+    </script>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        #box_wrap{
+            width:300px;
+            height:200px;
+            margin:50px auto 0;
+            background-color: #ccc;
+            position:relative;
+        }
+
+        .box{
+            width:50px;
+            height:50px;
+            left:100px;
+            top:50px;
+            background-color: #f00;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="box_wrap">
+        <p class="box">박스</p>
+    </div>
+    <p class="txt_1">절대 top 위치값 : <span></span></p>
+    <p class="txt_2">상대 top 위치값 : <span></span></p>
+</body>
+</html>

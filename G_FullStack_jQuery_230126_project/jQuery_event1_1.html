@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".btn1").click(function () {
+                // alert("클릭1");
+
+                // 클릭하면 글자색 빨간색으로 변경
+                // $(".btn1").css({"color":"#f00"});
+
+                // 상위요소의 동생 요소 스타일 적용
+                $(".btn1").parent().next().css({ "color": "#f00" });
+            });
+            // on 메소드 : 하나의 이벤트도 등록 가능
+            $(".btn2").on({
+                // "mouseover": function () {
+
+                // focus : 탭키로 이동해서 선택될때 이벤트
+                "mouseover focus": function () {
+                    // alert("over");
+                    // 마우스 올리면 녹색
+                    $(".btn2").parent().next().css({ "color": "#0f0" });
+                },
+
+                // blur : 탭키로 이동해서 선택을 벗어날 때 이벤트
+                "mouseout blur": function () {
+                    // alert("out");
+                    // 마우스 벗어나면 검정색
+                    $(".btn2").parent().next().css({ "color": "#000" });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>
+        <button class="btn1">버튼1</button>
+    </p>
+    <p>내용1</p>
+    <p>
+        <button class="btn2">버튼2</button>
+    </p>
+    <p>내용2</p>
+</body>
+
+</html>
