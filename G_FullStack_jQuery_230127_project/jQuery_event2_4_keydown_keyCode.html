@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            // keydown : 한/영키를 제외한 모든 키를 눌렀을 때 발생하는 이벤트
+            $(document).on("keydown", keyEventFnc);
+            function keyEventFnc(e) {
+                var direct = "";
+
+                // alert("7777");
+
+                // keyCode : 키마다 있는 코드
+                // alert(e.keyCode);
+
+                // switch (e.keyCode) {
+                //     case 37:
+                //         alert("LEFT");
+                //         break;
+                //     case 38:
+                //         alert("TOP");
+                //         break;
+                //     case 39:
+                //         alert("RIGHT");
+                //         break;
+                //     case 40:
+                //         alert("BOTTOM");
+                //         break;
+                // }
+
+                switch (e.keyCode) {
+                    case 37:
+                        direct = "LEFT";
+                        break;
+                    case 38:
+                        direct = "TOP";
+                        break;
+                    case 39:
+                        direct = "RIGHT";
+                        break;
+                    case 40:
+                        direct = "BOTTOM";
+                        break;
+                }
+                if(direct){
+                    $("#user_id").val(direct);
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p>
+        <input type="text" name="user_id" id="user_id">
+    </p>
+</body>
+
+</html>

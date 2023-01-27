@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .txt1 {
+            background-color: aqua;
+        }
+
+        .txt2 {
+            background-color: pink;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            // 2초동안 애니메이션 동작하면서 끝나면 경고창이 뜸
+            $(".btn1").on("click", function () {
+                $(".txt1").animate({
+                    marginLeft: "500px",
+                    fontSize: "30px"
+                },2000,"linear",function(){
+                    alert("모션 완료!");
+                }
+                );
+            });
+
+            $(".btn2").on("click", function () {
+                // += : 1초마다 오른쪽으로 누적 이동
+                $(".txt2").animate({
+                    marginLeft: "+=50px",
+                },1000
+                );
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>
+        <button class="btn1">버튼1</button>
+    </p>
+    <span class="txt1">"500px" 이동</span>
+    <p>
+        <button class="btn2">버튼2</button>
+    </p>
+    <span class="txt2">"50px" 이동</span>
+</body>
+
+</html>

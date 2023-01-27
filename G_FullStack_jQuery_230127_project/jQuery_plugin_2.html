@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="css/jquery-ui.css"></script>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script>
+        $(function () {
+            $("#startDate").datepicker({
+                // 오늘 이후부터 선택
+                minDate: +1,
+
+                // 한달까지 선택
+                maxDate: "+1M"
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>
+        <label for="startDate">날짜선택</label>
+            <input type="text" name="startDate" id="startDate">
+    </p>
+</body>
+
+</html>

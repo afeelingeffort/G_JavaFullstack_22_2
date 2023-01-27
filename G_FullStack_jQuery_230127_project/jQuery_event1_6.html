@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            // 마우스 올렸을 때
+            $(".btn1").on({
+                "mouseover": function () {
+                    $(".txt1").css({ "background-color": "yellow" });
+                },
+                // 마우스를 벗어났을 때
+                "mouseout": function () {
+                    // 작동 안됨
+                    // $("txt1").css({"background-color":"none"});
+
+                    //배경색 없음
+                    $(".txt1").css({ "background": "none" });
+                }
+            });
+            
+            //마우스를 올렸을때+벗어났을때
+            $(".btn2").hover(function () {
+                $(".txt2").css({ "background-color": "aqua" });
+            }, function () {
+                $(".txt2").css({ "background":"none" });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>
+        <button class="btn1">Mouse Over / Mouse Out</button>
+    </p>
+    <p class="txt1">내용1</p>
+    <p>
+        <button class="btn2">Hover</button>
+    </p>
+    <p class="txt2">내용2</p>
+</body>
+
+</html>

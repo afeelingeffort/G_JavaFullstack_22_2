@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            var txt1 = $(".txt1");
+            var count = 1;
+
+            $(".btnWrap button").on("click", function () {
+                // 내용1이 애니메이션 중이면 작동 안됨
+                if (txt1.is(":animated")) {
+                    // Back 버튼일때
+                    if ($(this).hasClass("backBtn")) {
+                        count--;
+                        if (count < 1) {
+                            count = 1;
+                            return;
+                        }
+                        // 10%씩 왼쪽으로 이동
+                        txt1.animate({ marginLeft: "-=10%" });
+                    } else {
+                        count++;
+                        if (count > 10) {
+                            count = 10;
+                            return;
+                        }
+                        txt1.animate({ marginLeft: "+=10%" });
+                    }
+                }
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .btnWrap {
+            margin-bottom: 10px;
+        }
+
+        .wrap {
+            /* max-width : 최대 너비 */
+            max-width: 600px;
+            border: 1px solid #000;
+        }
+
+        .txt1 {
+            /* 테두리 10% 크기 */
+            width: 10%;
+            text-align: center;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="btnWrap">
+        <button class="backBtn">Back</button>
+        <button class="goBtn">Go</button>
+    </p>
+    <div class="wrap">
+        <p class="txt1">내용1</p>
+    </div>
+</body>
+
+</html>
