@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 위치는 순서대로 작성해야 동작 -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script>
+        $(function(){
+            $(".slide_gallery").bxSlider({
+                // 슬라이드 자동 전환
+                // 사진 양 옆 손가락 마우스 모양으로 이동 가능
+                auto:true
+            });
+        });
+    </script>
+
+    <style>
+        *{
+            margin:0; 
+            padding:0;
+        }
+
+        #gallery-wrap{
+            margin:0 auto;
+            width:640px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gallery-wrap">
+        <ul class="slide_gallery">
+            <li><img src="images/pic_1.jpg"></li>
+            <li><img src="images/pic_2.jpg"></li>
+            <li><img src="images/pic_3.jpg"></li>
+            <li><img src="images/pic_4.jpg"></li>
+            <li><img src="images/pic_5.jpg"></li>
+            <li><img src="images/pic_6.jpg"></li>
+            <li><img src="images/pic_7.jpg"></li>
+            <li><img src="images/pic_8.jpg"></li>
+        </ul>
+    </div>
+</body>
+</html>
