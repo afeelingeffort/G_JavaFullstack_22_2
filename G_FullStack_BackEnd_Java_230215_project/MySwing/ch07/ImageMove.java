@@ -1,6 +1,5 @@
-package ch07;
+package ch05;
 
-import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -8,29 +7,33 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class ImageMove extends JFrame implements Movable2 {
+public class ImageMove extends JFrame implements Movable {
 
 	private JLabel imageLabel;
-	private int labelTextX;
-	private int labelTextY;
+	private int labelImageX;
+	private int labelImageY;
 
 	public ImageMove() {
 		initData();
 		setInitLayout();
 		addEventListener();
+		labelImageX = 300;
+		labelImageY = 300;
 	}
 
 	private void initData() {
 		setSize(800, 800);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		imageLabel=new JLabel(new ImageIcon("images/image10.png"));
-		imageLabel.setSize(100,100);
+
+		imageLabel = new JLabel(new ImageIcon("images/image2.png"));
+		imageLabel.setSize(200, 200);
 
 	}
 
 	private void setInitLayout() {
-		getContentPane().add(imageLabel);
-
+		add(imageLabel);
+		setLayout(null);
+		imageLabel.setLocation(300, 300);
 		setVisible(true);
 	}
 
@@ -67,50 +70,48 @@ public class ImageMove extends JFrame implements Movable2 {
 
 	}
 
-	public static void main(String[] args) {
-		new ImageMove();
-	}
-
 	@Override
 	public void left() {
-		int x = labelTextX -= 30;
-		int y = labelTextY;
+		if (0 < labelImageX) {
+			int x = labelImageX -= 30;
+			int y = labelImageY;
 
-		if (0 < labelTextX) {
 			imageLabel.setLocation(x, y);
 		}
 	}
 
 	@Override
 	public void right() {
-		int x = labelTextX += 30;
-		int y = labelTextY;
+		if (600 > labelImageX) {
+			int x = labelImageX += 30;
+			int y = labelImageY;
 
-		if (600 > labelTextX) {
 			imageLabel.setLocation(x, y);
 		}
 	}
 
 	@Override
 	public void up() {
-		int x = labelTextX;
-		int y = labelTextY -= 30;
+		if (-10 < labelImageY) {
+			int x = labelImageX;
+			int y = labelImageY -= 30;
 
-		if (0 < labelTextY) {
 			imageLabel.setLocation(x, y);
 		}
+
 	}
 
 	@Override
 	public void down() {
-		int x = labelTextX;
-		int y = labelTextY += 30;
+		if (550 > labelImageY) {
+			int x = labelImageX;
+			int y = labelImageY += 30;
 
-		imageLabel.setLocation(x, y);
-		if (600 > labelTextY) {
 			imageLabel.setLocation(x, y);
-			System.out.println(imageLabel.getX());
 		}
 	}
 
+	public static void main(String[] args) {
+		new ImageMove();
+	}
 }
