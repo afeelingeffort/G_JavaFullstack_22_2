@@ -1,0 +1,276 @@
+package ch01;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+public class AirplanePlayer extends JLabel implements Moveable {
+
+	AirplaneFrame aContext;
+
+	private ImageIcon player;
+	private ImageIcon bullet;
+
+	// 플레이어 위치
+	private int playerX;
+	private int playerY;
+
+	private int bulletX;
+	private int bulletY;
+
+	private boolean left;
+	private boolean right;
+	private boolean up;
+	private boolean down;
+
+	private boolean attack;
+
+	private boolean leftWallCrash;
+	private boolean rightWallCrash;
+	private boolean upWallCrash;
+	private boolean downWallCrash;
+
+	// 상수 선언 X 아이템을 먹으면 속도가 빨라져야 하기 때문에 값이 바뀔 수 있음
+	private int SPEED = 7;
+
+	public AirplanePlayer(AirplaneFrame aContext) {
+		this.aContext = aContext;
+
+		initData();
+		setInitLayout();
+	}
+
+	private void initData() {
+		player = new ImageIcon("images/airplane3.png");
+	}
+
+	private void setInitLayout() {
+		playerX = 290;
+		playerY = 700;
+
+		setSize(90, 80);
+		setLocation(playerX, playerY);
+		setIcon(player);
+	}
+
+	@Override
+	public void left() {
+		left = true;
+
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				while (left) {
+					playerX -= SPEED;
+					setLocation(playerX, playerY);
+
+					try {
+						Thread.sleep(10);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+
+				}
+			}
+		}).start();
+	}
+
+	@Override
+	public void right() {
+		right = true;
+
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				while (right) {
+					playerX += SPEED;
+					setLocation(playerX, playerY);
+
+					try {
+						Thread.sleep(10);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}).start();
+	}
+
+	@Override
+	public void up() {
+		up = true;
+
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				while (up) {
+					playerY -= SPEED;
+					setLocation(playerX, playerY);
+
+					try {
+						Thread.sleep(10);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				} //end of while
+				up = false;
+			}
+		}).start();
+	}
+
+	@Override
+	public void down() {
+		down = true;
+
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				while (down) {
+					playerY += SPEED;
+					setLocation(playerX, playerY);
+
+					try {
+						Thread.sleep(10);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				} // end of while
+				down = false;
+			}
+		}).start();
+	}
+
+	public void space() {
+
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				while (attack) {
+					setIcon(bullet);
+					bulletX += 10;
+					setLocation(bulletX, bulletY);
+
+					try {
+						Thread.sleep(2);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				} // end of while
+			}
+		}).start();
+	}
+
+	public void attack() {
+		PlayerBullet bullet = new PlayerBullet(aContext);
+		aContext.add(bullet);
+	}
+
+	public ImageIcon getPlayer() {
+		return player;
+	}
+
+	public void setPlayer(ImageIcon player) {
+		this.player = player;
+	}
+
+	public ImageIcon getBullet() {
+		return bullet;
+	}
+
+	public void setBullet(ImageIcon bullet) {
+		this.bullet = bullet;
+	}
+
+	public int getPlayerX() {
+		return playerX;
+	}
+
+	public void setPlayerX(int playerX) {
+		this.playerX = playerX;
+	}
+
+	public int getPlayerY() {
+		return playerY;
+	}
+
+	public void setPlayerY(int playerY) {
+		this.playerY = playerY;
+	}
+
+	public boolean isLeft() {
+		return left;
+	}
+
+	public void setLeft(boolean left) {
+		this.left = left;
+	}
+
+	public boolean isRight() {
+		return right;
+	}
+
+	public void setRight(boolean right) {
+		this.right = right;
+	}
+
+	public boolean isUp() {
+		return up;
+	}
+
+	public void setUp(boolean up) {
+		this.up = up;
+	}
+
+	public boolean isDown() {
+		return down;
+	}
+
+	public void setDown(boolean down) {
+		this.down = down;
+	}
+
+	public boolean isLeftWallCrash() {
+		return leftWallCrash;
+	}
+
+	public void setLeftWallCrash(boolean leftWallCrash) {
+		this.leftWallCrash = leftWallCrash;
+	}
+
+	public boolean isRightWallCrash() {
+		return rightWallCrash;
+	}
+
+	public void setRightWallCrash(boolean rightWallCrash) {
+		this.rightWallCrash = rightWallCrash;
+	}
+
+	public boolean isUpWallCrash() {
+		return upWallCrash;
+	}
+
+	public void setUpWallCrash(boolean upWallCrash) {
+		this.upWallCrash = upWallCrash;
+	}
+
+	public boolean isDownWallCrash() {
+		return downWallCrash;
+	}
+
+	public void setDownWallCrash(boolean downWallCrash) {
+		this.downWallCrash = downWallCrash;
+	}
+
+	public int getSPEED() {
+		return SPEED;
+	}
+
+	public void setSPEED(int sPEED) {
+		SPEED = sPEED;
+	}
+
+}
