@@ -1,17 +1,9 @@
 package project;
 
-import java.util.Random;
-
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-/*
-적 비행기가 죽으면 아이템을 랜덤한 값에 따라 밑으로 뿌림
-그 아이템을 Player가 먹었을 때 ( fastIcon 먹으면 속도 2 증가, recoverItem 먹으면 목숨 1 증가)
-*/
-
-// Bullet 클래스에 적군과 충돌했을 때 아이템 객체를 new 하고 화면에 붙여야 됨
-public class Item extends JLabel implements Moveable {
+public class Bullet extends JLabel implements Moveable {
 
 	// 메인프레임 접근
 	private AirplaneFrame mContext;
@@ -21,136 +13,140 @@ public class Item extends JLabel implements Moveable {
 	private int y;
 
 	// 움직임 상태
-//	private boolean left;
-//	private boolean right;
-//	private boolean up;
-	private boolean down;
+	private boolean up;
 
-	// 적군이 살아있는 상태 : 0, 죽었을 때 : 1
-//	private int alive;
-
+	// 불릿 상태 : 0 , 불릿이 터진 상태 : 1
+//	private int state; // 다른 클래스에서 bullet의 state를 사용하지 않아서 주석 하였습니다.
 	// 이미지
-	private ImageIcon fastIcon;
-	private ImageIcon recoverIcon;
+	private ImageIcon bullet;
+	private ImageIcon boom;
 
-	// fastItem : 80 ~ 110, recoverItem : 50 ~ 79
-	// 50보다 작으면 아이템 나오지 않음
-	// itemChance : 1부터 110까지 난수 발생
-	Random rd = new Random();
-	int itemChance = rd.nextInt(110);
-	int fastItemVal = 80; // fastItemVal 초기값 80
-	int recoverItemVal = 50; // recoverItemVal 초기값 50
+//	private BackgroundBulletService backgroundBulletService;
 
-	public boolean isDown() {
-		return down;
-	}
+	private Item item;
 
-	public void setDown(boolean down) {
-		this.down = down;
-	}
+//	public int getState() {
+//		return state;
+//	}
+//
+//	public void setState(int state) {
+//		this.state = state;
+//	}
 
 	// 생성자에서 메인프레임의 주소를 받아 호출할 수 있다.
-	public Item(AirplaneFrame mContext) {
+	public Bullet(AirplaneFrame mContext) {
 		this.mContext = mContext;
 
 		initData();
 		setInitLayout();
 		initThread();
 
-		// 아이템이 죽은 적군 비행기 자리에서 나오게 함
-		x = mContext.getEnemy().getX();
-		y = mContext.getEnemy().getY();
+//		backgroundBulletService = new BackgroundBulletService(this);
 	}
 
 	// 생성자 메서드 1
-	private void initData() {
-		down = false; // down을 false로 초기화
-
-		fastIcon = new ImageIcon("imagesProject/fastIcon.png");
-		recoverIcon = new ImageIcon("imagesProject/recoverIcon.png");
+	public void initData() {
+		bullet = new ImageIcon("imagesProject/PlayerBullet1.png");
+		boom = new ImageIcon("imagesProject/explosion.gif");
+//		state = 0; // 불릿인 상태로 초기화
+		up = false; // up이 false인 상태로 초기화
 	}
 
 	// 생성자 메서드 2
-	private void setInitLayout() {
-		setSize(50, 50);
+	public void setInitLayout() {
+		// 불릿의 위치가 Player 중앙에서 나오도록 하기 위해 조정값
+		x = mContext.getPlayer().getX() + 20;
+		y = mContext.getPlayer().getY();
+
+		setIcon(bullet);
+		setSize(80, 60);
 		setLocation(x, y);
 	}
 
 	// 생성자 메서드 3
-	public void initThread() {
+	public synchronized void initThread() {
 		new Thread(new Runnable() {
 			public void run() {
-				down();
+				up();
 			}
 		}).start();
 	}
 
+	// 적군과 충돌한 상태
+	public void crash() {
+		// 1 : 적이 죽은 상태
+		mContext.getEnemy().setAlive(1);
+//		state = 1; // 불릿이 터진 상태
+		mContext.remove(mContext.getEnemy()); // 적군 비행기를 지움
+//		setIcon(boom);
+//		mContext.getItem().setDown(true);
+//		mContext.getItem().down();
+//		mContext.repaint();
+
+//		try {
+//			Thread.sleep(1);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//		setIcon(null);
+
+	}
+
+	public void item() {
+		// item 객체를 생성해서 쓰레드 안 down()을 호출함
+		item = new Item(mContext);
+		item.initThread();
+	}
+
+//	@Override
+//	public void left() {
+//
+//	}
+
+//	@Override
+//	public void right() {
+//
+//	}
+
+	// up()이 true이면 실행된다.
 	@Override
-	public void down() {
-		// 랜덤수로 받은 itemChance가 80 ~ 110인 경우 fastItem
-		if (itemChance >= fastItemVal) {
-			setIcon(fastIcon);
-			setSize(100, 100);
+	public synchronized void up() {
+		up = true;
+
+		// true인 동안 불릿이 위로 나간다.
+		while (true) {
+			y--;
 			setLocation(x, y);
-			// 랜덤수로 받은 itemChance가 50 ~ 79인 경우 recoverItem
-		} else if (itemChance >= recoverItemVal) {
-			setIcon(recoverIcon);
-			setSize(100, 100);
-			setLocation(x, y);
-
-		}
-
-		// down이 true이면 아이콘 나옴
-		down = true;
-		mContext.add(this);
-
-		while (down) {
-			setLocation(x, y++); // y에 ++ 하여 내려가게 함
-//			System.out.println("2313123");
-			// 절댓값으로 보정값을 줌
-			if (Math.abs(x - mContext.getPlayer().getX()) < 50 && Math.abs(y - mContext.getPlayer().getY()) < 50) {
-				setIcon(null); // 아이콘을 Player가 먹으면 아이콘 없앰
-
-				// fastItem을 먹으면 플레이어의 속도가 2 증가
-				if (itemChance >= fastItemVal) {
-					mContext.getPlayer().setSpeed(2);
-					down = false;
-					return;
-
-					// recoverItem을 먹으면 플레이어 목숨이 2일 때 목숨 1 증가
-				} else if (itemChance >= recoverItemVal) {
-					
-					if (mContext.getPlayer().getLife() == 2) {
-						mContext.getLife2().lifeUp();
-						System.out.println("생명력 1번");
-
-						// 목숨 1일 때 1증가
-					} else if (mContext.getPlayer().getLife() == 1) {
-						mContext.getLife1().lifeUp();
-						System.out.println("생명력 2번째 ");
-
-					}
-					down = false;
-
+			// 절댓값으로 보정값을 준다.
+			if (Math.abs(x - mContext.getEnemy().getX()) < 50 && Math.abs(y - mContext.getEnemy().getY()) < 50) {
+				// 적군이 죽은 상태 : 0 이면
+				if (mContext.getEnemy().getAlive() == 0) {
+					mContext.getEnemy().beattacked(); // 적군이 공격당한 메서드를 호출
+					crash(); // 적군과 충돌한 상태 호출
+					setIcon(boom); // 충돌 이미지
+					item(); // 아이템 이미지
 				}
-
-			} // end of if
+			}
 
 			try {
-				Thread.sleep(10);
+				Thread.sleep(3);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			repaint();
 
-			// y좌표가 840이면 아이템 사라지게 함
-			if (y == 840) {
-				System.out.println("0999");
+			// y좌표가 0이면 불릿 아이콘을 없애고 실행을 멈춘다.
+			// (위에 불릿 잔상 나오는 거 여기서 조정값 줘도 안 바뀜) y < 100, y < 50, y < 30, y < 15, y < -20
+			if (y < -20) {
 				setIcon(null);
-				down = false;
 				break;
 			}
 
 		} // end of while
-	} // end of down
+	} // end of up
+
+//	@Override
+//	public void down() {
+//
+//	}
+
 } // end of class
