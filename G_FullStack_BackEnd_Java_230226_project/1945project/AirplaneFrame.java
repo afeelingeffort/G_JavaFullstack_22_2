@@ -12,6 +12,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+//처음엔 BackgroundPlayerService가 잘 실행되는데
+//적군 비행기에 맞거나 불릿에 맞으면 BackgroundPlayerService를 벗어나서 ArrayOutOfBoundsException이 발생합니다.
+
 //메인 프레임
 public class AirplaneFrame extends JFrame {
 
