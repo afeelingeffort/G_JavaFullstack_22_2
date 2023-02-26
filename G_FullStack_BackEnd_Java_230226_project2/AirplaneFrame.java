@@ -345,6 +345,8 @@ public class AirplaneFrame extends JFrame {
 
 			// Time클래스의 timeLabel을 참조하여 x : 830, y : 20에 위치 지정
 			time.timeLabel.setLocation(830, 20);
+			
+			gameOver.setLocation(250, 200);
 
 		} // end of paintComponent
 
